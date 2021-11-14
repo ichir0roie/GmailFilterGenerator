@@ -1,0 +1,12 @@
+	<entry>
+		<category term='filter'></category>
+		<title>{title}</title>
+		<id>tag:mail.google.com,2008:filter:{id}</id>
+		<updated>2021-11-13T07:21:51Z</updated>
+		<content></content>
+		<apps:property name='from' value='customerservice@hempelf.com'/>
+		<apps:property name='label' value='shopping'/>
+		<apps:property name='shouldArchive' value='true'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
