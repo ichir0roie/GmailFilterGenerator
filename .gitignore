@@ -1,3 +1,6 @@
 
 sample/mailFilters.xml
 sample/edit.xml
+output/filters.xml
+data/labelingList.csv
+data/markAsReadList.csv
