@@ -18,8 +18,6 @@ class CreateFilter:
 
         self.targetLabeling = None
 
-        self.targetMarkAsRead = None
-
         self.loadTargetLists()
 
         self.entryTextList = None
@@ -59,13 +57,7 @@ class CreateFilter:
 
             reader = csv.reader(f)
 
-            self.targetLabeling = [row for row in reader][1:]
-
-        with open("data/markAsReadList.csv", mode="r", encoding="utf-8", newline="")as f:
-
-            reader = csv.reader(f)
-
-            self.targetMarkAsRead = [row for row in reader][1:]
+            self.targetLabeling = [row for row in reader if len(row) == 3][1:]
 
     def loadEntryList(self):
 
@@ -73,13 +65,7 @@ class CreateFilter:
 
         for target in self.targetLabeling:
 
-            text = self.createEntry(target[0], target[1], "false", "true")
-
-            self.entryTextList.append(text)
-
-        for target in self.targetMarkAsRead:
-
-            text = self.createEntry(target[0], target[1], "true", "true")
+            text = self.createEntry(target[0], target[1], target[2], "true")
 
             self.entryTextList.append(text)
 
